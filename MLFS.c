@@ -135,3 +135,46 @@ void main()
                     }
             }
        }                                   //end of while   
+   awt2=0;
+    printf("\n Process   Waitnig time");
+    for(i=0;i<n3;i++)
+       {
+                       wt2[i]=wt2[i]-at2[i];
+                       awt2=awt2+wt2[i];
+        }
+		int tat[10];
+        for(i=0;i<n;i++)
+        {
+        	tat[i]=wt[i]+bt[i];	
+		}
+		int tat2[10];
+		for(i=0;i<n3;i++)
+		{
+			tat2[i]=wt2[i]+bt2[i];
+		}
+		printf("\nPname\tArrival time\tBurst time\tpriority\tTAtime\t\tWaiting time");
+    	for(i=0;i<n;i++)
+		{
+       		printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",pn[i],at[i],bt[i],p[i],tat[i],wt[i]);
+       	}
+       	for(i=0;i<n3;i++)
+		{
+			printf("\n%s\t%5d\t\t%5d\t\t\t\t%5d\t\t%5d",pn2[i],at2[i],bt2[i],tat2[i],wt2[i]);
+		}
+	for(i=0;i<n;i++) // sum of TAT
+	{
+		totta=totta+tat[i];
+	}
+	for(i=0;i<n3;i++)
+	{
+		totta=totta+tat2[i];
+	}
+    aw=awt2+totwt;
+    float total=(float)aw/(n2+n3);
+    float total2=(float)totta/(n2+n3);
+    printf("\nTotal TAtime : %d",totta);
+    printf("\nTotal waiting time : %d",aw);
+    printf("\n Avg TAtime %f: ",total2);
+    printf("\n Avg wainting time %f: ",total);
+    getch();    
+}
