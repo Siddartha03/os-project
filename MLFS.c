@@ -96,4 +96,42 @@ void main()
               }
          }
      }
-	
+    printf("\n enter time quantum : ");
+    scanf("%d",&ts); int q=0;
+    printf("\nprocess  :")  ;
+    for(i=0;i<n3;i++)
+     {
+       printf("  %d",i+1);
+      }
+    printf("\nBrust time : ");
+    for(i=0;i<n3;i++)
+       {
+         printf("  %d",bt2[i]); rt2[i]=bt2[i];
+        }
+    printf("\nArrival time :");
+    for(i=0;i<n;i++)
+      {
+          printf(" %d",at2[i]);
+      }
+    j=0;
+
+    while(j<=n)
+       {
+          j++;
+          for(i=0;i<n3;i++)
+            {
+              if(rt2[i]==0)  continue;
+                   if(rt2[i]>ts)
+                     {
+                        q=q+ts;
+                        rt2[i]=rt2[i]-ts;
+                        te2[i]=te2[i]+1;
+                     }
+                  else
+                    {
+                       wt2[i]=q-te2[i]*ts;
+                       q=q+rt2[i]; 
+                       rt2[i]=rt2[i]-rt2[i];
+                    }
+            }
+       }                                   //end of while   
