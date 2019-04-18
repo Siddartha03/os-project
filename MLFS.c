@@ -63,3 +63,37 @@ void main()
         }
         totwt+=wt[i];
     }
+    // Level 2 code
+
+     int k,ts,temp2=0;
+     int aw; float awt2;
+     int bt2[10],wt2[10],te2[10],rt2[10],at2[10];j=0;
+     char pn2[10][10];
+     printf("\nenter number of process in Level2:\t");
+     scanf("%d",&n3);
+    for(i=0;i<n3;i++)
+      {
+      	 printf("Enter name of process : ");
+ 		 scanf("%s",&pn2[i]);
+          printf("%d  \nbrust time : ");
+          scanf("%d",&bt2[i]);
+          printf("ariavl time : ");
+          scanf("%d",&at2[i]);
+          te2[i]=0;     wt2[i]=0;
+      }
+    for(i=0;i<n3;i++)
+      {
+        for(j=i+1;j<n3;j++)
+         {
+             if(at2[i]>at2[j])      //sorting according to arrival time
+               {
+                    temp2=at2[i];                                          
+                    at2[i]=at2[j];
+                    at2[j]=temp;
+                    temp=bt2[i];
+                    bt2[i]=bt2[j];
+                    bt2[j]=temp;
+              }
+         }
+     }
+	
