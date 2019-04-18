@@ -11,3 +11,16 @@ void main()
     printf("Enter the number of process in Level 1:");
     scanf("%d",&n);n2=n;
     for(i=0; i<n; i++)
+    {
+		printf("Enter name of process : ");
+ 		scanf("%s",&pn[i]);
+ 		
+		printf("Enter process %d Arrival time: ",i+1);
+		scanf("%d",&at[i]);
+		
+		printf("Enter process %d burst time: ",i+1);
+		scanf("%d",&bt[i]);
+
+		printf("Enter process %d priority: ",i+1);
+        scanf("%d",&p[i]);
+    }
